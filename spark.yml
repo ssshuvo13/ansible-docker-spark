@@ -28,3 +28,11 @@
     - name: debug docker_compose_version
       debug: 
         var: docker_compose_version
+
+    - name: Run docker-compose up
+      become: yes
+      shell: "nohup docker-compose up >/dev/null 2>&1 &"
+      args:
+        chdir: /home/yungshun/workspace/ansible/ansible-docker-spark-local
+      async: 10
+      poll: 0

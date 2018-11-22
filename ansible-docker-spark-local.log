@@ -46,3 +46,70 @@ implicit localhost does not match 'all'
 }
 2018-11-22 09:31:17,343 p=4990 u=yungshun |  PLAY RECAP ****************************************************************************
 2018-11-22 09:31:17,344 p=4990 u=yungshun |  127.0.0.1                  : ok=5    changed=3    unreachable=0    failed=0   
+2018-11-22 09:35:23,506 p=5173 u=yungshun |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the
+implicit localhost does not match 'all'
+
+2018-11-22 09:35:23,858 p=5173 u=yungshun |  PLAY [spark] **************************************************************************
+2018-11-22 09:35:23,866 p=5173 u=yungshun |  TASK [Gathering Facts] ****************************************************************
+2018-11-22 09:35:24,624 p=5173 u=yungshun |  ok: [127.0.0.1]
+2018-11-22 09:35:24,689 p=5173 u=yungshun |  TASK [Install docker-compose] *********************************************************
+2018-11-22 09:35:25,151 p=5173 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:35:25,212 p=5173 u=yungshun |  TASK [chmod docker-compose] ***********************************************************
+2018-11-22 09:35:25,593 p=5173 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:35:25,648 p=5173 u=yungshun |  TASK [check docker-compose version] ***************************************************
+2018-11-22 09:35:26,551 p=5173 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:35:26,615 p=5173 u=yungshun |  TASK [debug docker_compose_version] ***************************************************
+2018-11-22 09:35:26,674 p=5173 u=yungshun |  ok: [127.0.0.1] => {
+    "docker_compose_version": {
+        "changed": true, 
+        "cmd": "docker-compose --version", 
+        "delta": "0:00:00.566228", 
+        "end": "2018-11-22 09:35:26.536914", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-11-22 09:35:25.970686", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "docker-compose version 1.22.0, build f46880fe", 
+        "stdout_lines": [
+            "docker-compose version 1.22.0, build f46880fe"
+        ]
+    }
+}
+2018-11-22 09:35:26,739 p=5173 u=yungshun |  TASK [Run docker-compose up] **********************************************************
+2018-11-22 09:35:50,262 p=5173 u=yungshun |   [ERROR]: User interrupted execution
+
+2018-11-22 09:41:27,404 p=5926 u=yungshun |   [WARNING]: provided hosts list is empty, only localhost is available. Note
+that the implicit localhost does not match 'all'
+
+2018-11-22 09:41:27,743 p=5926 u=yungshun |  PLAY [spark] *******************************************************************
+2018-11-22 09:41:27,752 p=5926 u=yungshun |  TASK [Gathering Facts] *********************************************************
+2018-11-22 09:41:28,495 p=5926 u=yungshun |  ok: [127.0.0.1]
+2018-11-22 09:41:28,561 p=5926 u=yungshun |  TASK [Install docker-compose] **************************************************
+2018-11-22 09:41:29,015 p=5926 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:41:29,076 p=5926 u=yungshun |  TASK [chmod docker-compose] ****************************************************
+2018-11-22 09:41:29,450 p=5926 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:41:29,510 p=5926 u=yungshun |  TASK [check docker-compose version] ********************************************
+2018-11-22 09:41:30,415 p=5926 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:41:30,475 p=5926 u=yungshun |  TASK [debug docker_compose_version] ********************************************
+2018-11-22 09:41:30,532 p=5926 u=yungshun |  ok: [127.0.0.1] => {
+    "docker_compose_version": {
+        "changed": true, 
+        "cmd": "docker-compose --version", 
+        "delta": "0:00:00.568128", 
+        "end": "2018-11-22 09:41:30.400931", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-11-22 09:41:29.832803", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "docker-compose version 1.22.0, build f46880fe", 
+        "stdout_lines": [
+            "docker-compose version 1.22.0, build f46880fe"
+        ]
+    }
+}
+2018-11-22 09:41:30,602 p=5926 u=yungshun |  TASK [Run docker-compose up] ***************************************************
+2018-11-22 09:41:31,759 p=5926 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:41:31,761 p=5926 u=yungshun |  PLAY RECAP *********************************************************************
+2018-11-22 09:41:31,761 p=5926 u=yungshun |  127.0.0.1                  : ok=6    changed=4    unreachable=0    failed=0   
