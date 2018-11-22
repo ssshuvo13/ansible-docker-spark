@@ -1,0 +1,48 @@
+2018-11-22 09:29:23,917 p=4807 u=yungshun |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the
+implicit localhost does not match 'all'
+
+2018-11-22 09:29:25,169 p=4807 u=yungshun |  PLAY [spark] **************************************************************************
+2018-11-22 09:29:25,202 p=4807 u=yungshun |  TASK [Gathering Facts] ****************************************************************
+2018-11-22 09:29:26,171 p=4807 u=yungshun |  ok: [127.0.0.1]
+2018-11-22 09:29:26,237 p=4807 u=yungshun |  TASK [Install docker-compose] *********************************************************
+2018-11-22 09:29:26,703 p=4807 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:29:26,759 p=4807 u=yungshun |  TASK [chmod docker-compose] ***********************************************************
+2018-11-22 09:29:27,155 p=4807 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:29:27,233 p=4807 u=yungshun |  TASK [check docker-compose version] ***************************************************
+2018-11-22 09:29:27,580 p=4807 u=yungshun |  fatal: [127.0.0.1]: FAILED! => {"changed": true, "cmd": "docker-compose --version", "delta": "0:00:00.009394", "end": "2018-11-22 09:29:27.550440", "msg": "non-zero return code", "rc": 255, "start": "2018-11-22 09:29:27.541046", "stderr": "[4950] Cannot open self /usr/local/bin/docker-compose or archive /usr/local/bin/docker-compose.pkg", "stderr_lines": ["[4950] Cannot open self /usr/local/bin/docker-compose or archive /usr/local/bin/docker-compose.pkg"], "stdout": "", "stdout_lines": []}
+2018-11-22 09:29:27,582 p=4807 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-docker-spark-local/spark.retry
+
+2018-11-22 09:29:27,582 p=4807 u=yungshun |  PLAY RECAP ****************************************************************************
+2018-11-22 09:29:27,582 p=4807 u=yungshun |  127.0.0.1                  : ok=3    changed=2    unreachable=0    failed=1   
+2018-11-22 09:31:14,144 p=4990 u=yungshun |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the
+implicit localhost does not match 'all'
+
+2018-11-22 09:31:14,503 p=4990 u=yungshun |  PLAY [spark] **************************************************************************
+2018-11-22 09:31:14,512 p=4990 u=yungshun |  TASK [Gathering Facts] ****************************************************************
+2018-11-22 09:31:15,287 p=4990 u=yungshun |  ok: [127.0.0.1]
+2018-11-22 09:31:15,342 p=4990 u=yungshun |  TASK [Install docker-compose] *********************************************************
+2018-11-22 09:31:15,811 p=4990 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:31:15,875 p=4990 u=yungshun |  TASK [chmod docker-compose] ***********************************************************
+2018-11-22 09:31:16,252 p=4990 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:31:16,325 p=4990 u=yungshun |  TASK [check docker-compose version] ***************************************************
+2018-11-22 09:31:17,223 p=4990 u=yungshun |  changed: [127.0.0.1]
+2018-11-22 09:31:17,279 p=4990 u=yungshun |  TASK [debug docker_compose_version] ***************************************************
+2018-11-22 09:31:17,335 p=4990 u=yungshun |  ok: [127.0.0.1] => {
+    "docker_compose_version": {
+        "changed": true, 
+        "cmd": "docker-compose --version", 
+        "delta": "0:00:00.572953", 
+        "end": "2018-11-22 09:31:17.208240", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-11-22 09:31:16.635287", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "docker-compose version 1.22.0, build f46880fe", 
+        "stdout_lines": [
+            "docker-compose version 1.22.0, build f46880fe"
+        ]
+    }
+}
+2018-11-22 09:31:17,343 p=4990 u=yungshun |  PLAY RECAP ****************************************************************************
+2018-11-22 09:31:17,344 p=4990 u=yungshun |  127.0.0.1                  : ok=5    changed=3    unreachable=0    failed=0   

@@ -1,0 +1,30 @@
+---
+- name: spark
+  hosts: 127.0.0.1
+  connection: local
+
+  vars: 
+    ansible_become_pass: "lucifer317"
+
+  tasks:
+    - name: Install docker-compose
+      become: yes
+      get_url:
+        url: https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)
+        dest: /usr/local/bin/docker-compose
+        mode: 0440
+
+    - name: chmod docker-compose
+      become: yes
+      file:
+        path: /usr/local/bin/docker-compose
+        mode: "+x"
+
+    - name: check docker-compose version
+      become: yes
+      shell: docker-compose --version
+      register: docker_compose_version
+
+    - name: debug docker_compose_version
+      debug: 
+        var: docker_compose_version
