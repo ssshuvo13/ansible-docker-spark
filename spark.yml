@@ -33,6 +33,6 @@
       become: yes
       shell: "nohup docker-compose up >/dev/null 2>&1 &"
       args:
-        chdir: /home/yungshun/workspace/ansible/ansible-docker-spark-local
+        chdir: /home/yungshun/workspace/ansible/ansible-docker-spark
       async: 10
       poll: 0
